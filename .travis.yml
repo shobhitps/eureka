@@ -10,7 +10,10 @@ before_install:
 - sudo apt-get -y install default-jdk
 install:
 - ls /usr/lib/jvm/
-- export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-arm64
+- |
+  if [[ "${TRAVIS_CPU_ARCH}" == "arm64" ]]; then
+    export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-arm64
+  fi
 - ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
