@@ -2,7 +2,7 @@ buildscript {
     repositories { jcenter() }
 
     dependencies {
-        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:2.2.+'
+        classpath 'com.netflix.nebula:gradle-extra-configurations-plugin:5.0.+'
     }
 }
 
@@ -29,7 +29,7 @@ allprojects {
     ext {
         githubProjectName = 'eureka'
 
-        awsVersion = '1.11.277'
+        awsVersion = '1.11.847'
         servletVersion = '2.5'
         jerseyVersion = '1.19.1'
         jettisonVersion = '1.4.0'
